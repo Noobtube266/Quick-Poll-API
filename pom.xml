@@ -8,7 +8,7 @@
 		<version>2.7.5</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.apress1</groupId>
+	<groupId>com.HW</groupId>
 	<artifactId>Quick-Poll-API</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>Quick-Poll-API</name>

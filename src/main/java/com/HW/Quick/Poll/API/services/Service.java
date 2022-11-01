@@ -54,7 +54,7 @@ public class Service {
 
     public ResponseEntity<?> getPoll(Long pollId) {
         verifyPoll(pollId);
-        Optional<Poll> p = pollRepostory.findById(pollId);
+        Optional<Poll> p = pollRepository.findById(pollId);
         return new ResponseEntity<> (p, HttpStatus.OK);
     }
 
@@ -63,13 +63,13 @@ public class Service {
                                          Long pollId) {
 // Save the entity
         verifyPoll(pollId);
-        Poll p = pollRepostory.save(poll);
+        Poll p = pollRepository.save(poll);
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
     public ResponseEntity<?> deletePoll(Long pollId) {
         verifyPoll(pollId);
-        pollRepostory.deleteById(pollId);
+        pollRepository.deleteById(pollId);
         return new ResponseEntity<>(HttpStatus.OK);
     }
 }
