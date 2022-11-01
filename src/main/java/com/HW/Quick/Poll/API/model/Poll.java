@@ -11,29 +11,29 @@ public class Poll {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="POLL_ID")
     private Long id;
-    @ManyToOne
-    @JoinColumn(name = "question_ID")
+
+    @Column(name = "question_ID")
     @NotEmpty
-    private NotEmpty question;
+    private String question;
     @OneToMany(cascade = {CascadeType.ALL})
     @JoinColumn(name="POLL_ID")
     @OrderBy
     @Size(min=2, max = 6)
-    private Set<Size> options = new java.util.LinkedHashSet<>();
+    private Set<Options> options = new java.util.LinkedHashSet<>();
 
-    public Set<Size> getOptions() {
+    public Set<Options> getOptions() {
         return options;
     }
 
-    public void setOptions(Set<Size> options) {
+    public void setOptions(Set<Options> options) {
         this.options = options;
     }
 
-    public NotEmpty getQuestion() {
+    public String getQuestion() {
         return question;
     }
 
-    public void setQuestion(NotEmpty question) {
+    public void setQuestion(String question) {
         this.question = question;
     }
 
