@@ -13,10 +13,6 @@ public class PollController {
     @Autowired
     private Service service;
 
-
-
-
-
     @GetMapping("/polls")
     public ResponseEntity<Iterable<Poll>> getAllPolls() {
         return service.getAllPolls();
