@@ -19,7 +19,7 @@ public class Poll {
     @JoinColumn(name="POLL_ID")
     @OrderBy
     @Size(min=2, max = 6)
-    private Set<Options> options = new java.util.LinkedHashSet<>();
+    private Set<Options> options; //= new java.util.LinkedHashSet<>();
 
     public Set<Options> getOptions() {
         return options;

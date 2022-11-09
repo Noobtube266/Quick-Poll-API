@@ -10,6 +10,7 @@ public class ErrorDetail {
     private String detail;
     private long timeStamp;
     private String developerMessage;
+    private String path;
     private Map<String, List<ValidationError>> errors = new HashMap<String, List<ValidationError>>();
 // Getters and Setters ommited for brevity
 
@@ -59,6 +60,14 @@ public class ErrorDetail {
 
     public void setDeveloperMessage(String developerMessage) {
         this.developerMessage = developerMessage;
+    }
+
+    public String getPath() {
+        return path;
+    }
+
+    public void setPath(String path) {
+        this.path = path;
     }
 
     @Override
